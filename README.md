@@ -9,7 +9,7 @@ To use kubectl put this step into your workflow:
 
 ### Authorization with config file
 ```yaml
-- uses: actions-hub/kubectl@master
+- uses: waseel-asp/kubectl@master
   env:
     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
   with:
@@ -18,7 +18,7 @@ To use kubectl put this step into your workflow:
 
 ### Authorization with credentials
 ```yaml
-- uses: actions-hub/kubectl@master
+- uses: waseel-asp/kubectl@master
   env:
     KUBE_HOST: ${{ secrets.KUBE_HOST }}
     KUBE_USERNAME: ${{ secrets.KUBE_USERNAME }}
@@ -73,7 +73,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions-hub/kubectl@master
+      - uses: waseel-asp/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         with:
@@ -91,11 +91,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: actions-hub/kubectl@master
+      - uses: waseel-asp/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
 
-      - uses: actions-hub/kubectl@master
+      - uses: waseel-asp/kubectl@master
         with:
           args: get pods
 ```
@@ -106,7 +106,7 @@ After accepting PR the new release will be created.
 To use a specific version of kubectl use:
 
 ```yaml
-- uses: actions-hub/kubectl@1.14.3
+- uses: waseel-asp/kubectl@1.14.3
   env:
     KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
   with:
